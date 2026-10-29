@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+body { display: flex; height: 100vh; background: #f0f2f5; }
+.hidden { display: none !important; }
+
+.auth-panel { margin: auto; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 10px; width: 300px; }
+.auth-panel input, .auth-panel button { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.auth-panel button { background: #007bff; color: white; border: none; cursor: pointer; }
+
+.chat-container { display: flex; width: 100vw; height: 100vh; }
+.sidebar { width: 300px; background: #fff; border-right: 1px solid #ddd; display: flex; flex-direction: column; }
+.current-user { padding: 15px; background: #f7f9fa; font-weight: bold; border-bottom: 1px solid #ddd; }
+.sidebar h3 { padding: 12px 15px; font-size: 0.85rem; color: #888; text-transform: uppercase; }
+.sidebar ul { list-style: none; overflow-y: auto; flex: 1; }
+.sidebar li { padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #f2f2f2; }
+.sidebar li.active { background: #e9f2ff; }
+
+.status-dot { width: 10px; height: 10px; border-radius: 50%; background: #ccc; }
+.status-dot.online { background: #28a745; }
+
+.chat-area { flex: 1; display: flex; flex-direction: column; background: #fbfbfb; }
+#chat-header { padding: 15px; font-weight: bold; border-bottom: 1px solid #ddd; background: #fff; }
+.messages-container { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+
+.msg { max-width: 65%; padding: 10px 14px; border-radius: 8px; font-size: 0.95rem; line-height: 1.4; word-break: break-word; }
+.msg.sent { align-self: flex-end; background: #007bff; color: #fff; }
+.msg.received { align-self: flex-start; background: #e4e6eb; color: #050505; }
+.msg-time { font-size: 0.75rem; opacity: 0.7; margin-top: 4px; text-align: right; }
+
+.message-form { display: flex; padding: 12px; background: #fff; border-top: 1px solid #ddd; }
+.message-form input { flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 20px; outline: none; margin-right: 10px; }
+.message-form button { padding: 0 20px; background: #007bff; color: #fff; border: none; border-radius: 20px; cursor: pointer; }

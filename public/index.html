@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Private Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="auth-panel" class="auth-panel">
+    <h2>Login / Quick Connect</h2>
+    <input id="email-input" type="email" placeholder="Email" value="alice@test.com" />
+    <input id="password-input" type="password" placeholder="Password" value="password123" />
+    <button id="login-btn">Log In</button>
+  </div>
+
+  <div id="chat-app" class="chat-container hidden">
+    <aside class="sidebar">
+      <div class="current-user">
+        <span id="display-username"></span>
+      </div>
+      <h3>Contacts</h3>
+      <ul id="user-list"></ul>
+    </aside>
+
+    <main class="chat-area">
+      <header id="chat-header">Select a contact to start chatting</header>
+      <div id="messages-container" class="messages-container"></div>
+      <form id="message-form" class="message-form hidden">
+        <input id="message-input" type="text" placeholder="Type a message (e.g. Call me 9876543210 or email test@gmail.com)" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
